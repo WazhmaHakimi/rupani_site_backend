@@ -67,6 +67,10 @@ Date: Jun 2015
   width: 30%;
 }
 
+.text-center {
+  text-align: center;
+}
+
 body {
   background: #f5f5f5;
   margin: 0;

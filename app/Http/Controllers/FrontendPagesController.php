@@ -14,6 +14,7 @@ use App\Models\Report;
 use App\Models\PhotoGallery;
 use App\Models\DocumentaryVideo;
 use App\Models\Career;
+use App\Models\WhereWeWork;
 
 class FrontendPagesController extends Controller
 {
@@ -128,5 +129,12 @@ class FrontendPagesController extends Controller
         $career = Career::all();
 
         return response()->json($career, 200);
+    }
+
+    public function whereWeWork()
+    {
+        $whereWeWork = WhereWeWork::all();
+
+        return response()->json($whereWeWork, 200);
     }
 }

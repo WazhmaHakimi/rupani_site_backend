@@ -230,6 +230,10 @@
                                     <li>
                                         <a href="{{url('partners')}}">Partners</a>
                                     </li>
+
+                                    <li>
+                                        <a href="{{url('whereWeWork')}}">Where We Work</a>
+                                    </li>
                                 </ul>
                             </li> 
                             

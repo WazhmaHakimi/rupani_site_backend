@@ -24,6 +24,7 @@ Route::get('/downloadReport/{id}', [FrontendPagesController::class, 'downloadRep
 Route::get('gallery', [FrontendPagesController::class, 'gallery']);
 Route::get('documentaryVideos', [FrontendPagesController::class, 'documentaryVideos']);
 Route::get('career', [FrontendPagesController::class, 'career']);
+Route::get('whereWeWork', [FrontendPagesController::class, 'whereWeWork']);
 
 Route::post('storeMessage', [CommentController::class, 'save']);
 

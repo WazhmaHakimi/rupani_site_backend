@@ -14,6 +14,7 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\WhereWeWorkController;
 
 Route::group(['middleware' => 'guest'], function() {
     Route::get('/register', [AuthController::class, 'register'])->name('register');
@@ -102,6 +103,11 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('comments', [CommentController::class, 'index']);
     Route::get('deleteMessage/{id}', [CommentController::class, 'delete']);
+
+    Route::get('whereWeWork', [WhereWeWorkController::class, 'index']);
+    Route::get('addWhereWeWork', [WhereWeWorkController::class, 'create']);
+    Route::post('addWhereWeWork', [WhereWeWorkController::class, 'save']);
+    Route::post('updateWhereWeWork/{id}', [WhereWeWorkController::class, 'update']);
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
