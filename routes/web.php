@@ -15,7 +15,6 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\WhereWeWorkController;
-use App\Http\Controllers\WhatWeDoCategoryController;
 
 Route::group(['middleware' => 'guest'], function() {
     Route::get('/register', [AuthController::class, 'register'])->name('register');
@@ -109,13 +108,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('addWhereWeWork', [WhereWeWorkController::class, 'create']);
     Route::post('addWhereWeWork', [WhereWeWorkController::class, 'save']);
     Route::post('updateWhereWeWork/{id}', [WhereWeWorkController::class, 'update']);
-
-    Route::get('whatWeDoCategories', [WhatWeDoCategoryController::class, 'index']);
-    Route::get('addWhatWeDoCategory', [WhatWeDoCategoryController::class, 'create']);
-    Route::post('addWhatWeDoCategory', [WhatWeDoCategoryController::class, 'save']);
-    Route::get('deleteWhatWeDoCategory/{id}', [WhatWeDoCategoryController::class, 'delete']);
-    Route::get('updateWhatWeDoCategory/{id}', [WhatWeDoCategoryController::class, 'edit']);
-    Route::post('updateWhatWeDoCategory/{id}', [WhatWeDoCategoryController::class, 'update']);
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });

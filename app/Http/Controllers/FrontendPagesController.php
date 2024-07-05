@@ -15,7 +15,6 @@ use App\Models\PhotoGallery;
 use App\Models\DocumentaryVideo;
 use App\Models\Career;
 use App\Models\WhereWeWork;
-use App\Models\WhatWeDoCategory;
 
 class FrontendPagesController extends Controller
 {
@@ -137,12 +136,5 @@ class FrontendPagesController extends Controller
         $whereWeWork = WhereWeWork::all();
 
         return response()->json($whereWeWork, 200);
-    }
-
-    public function whatWeDoCategory()
-    {
-        $whatWeDoCategory = WhatWeDoCategory::all();
-
-        return response()->json($whatWeDoCategory, 200);
     }
 }
