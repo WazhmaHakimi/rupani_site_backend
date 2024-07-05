@@ -6,7 +6,7 @@
 
 @endsection
 
-@section('title', 'Rupani Foundation - Comment')
+@section('title', 'Rupani Foundation - Comments')
 
 @section('main-container')
 <!-- ============================================================== -->
@@ -20,16 +20,16 @@
             <!-- Page-Title -->
             <div class="row">
                 <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Comment</h4>
+                    <h4 class="pull-left page-title">Comments</h4>
                     <ol class="breadcrumb pull-right">
-                        <li class="active">Comment</li>
+                        <li class="active">Comments</li>
                     </ol>
                 </div>
 
-                <div class="col-sm-10 col-sm-offset-1">
+                <div class="col-sm-12">
                     <div class="panel panel-border panel-inverse">
                         <div class="panel-heading well well-lg">
-                            <h3 class="panel-title pull-left">Comment Table</h3>
+                            <h3 class="panel-title pull-left">Comments Table</h3>
                         </div>
                         <div class="panel-body" data-pattern="priority-columns">
 
