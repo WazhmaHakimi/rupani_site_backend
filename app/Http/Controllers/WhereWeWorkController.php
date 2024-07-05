@@ -10,6 +10,7 @@ class WhereWeWorkController extends Controller
     public function index()
     {
         $whereWeWork = WhereWeWork::find(1);
+        
         return view('whereWeWork', compact('whereWeWork'));
     }
 
