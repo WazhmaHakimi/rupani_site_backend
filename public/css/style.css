@@ -55,9 +55,6 @@ Date: Jun 2015
 @import url(http://fonts.googleapis.com/css?family=Nunito:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
 
-
-
-
 /******** 1. General ********/
 .no-sort::after { display: none!important; }
 .no-sort { pointer-events: none!important; cursor: default!important; }
@@ -68,6 +65,14 @@ Date: Jun 2015
 }
 
 .text-center {
+  text-align: center;
+}
+
+td {
+  vertical-align: middle !important;
+}
+
+td.actions {
   text-align: center;
 }
 

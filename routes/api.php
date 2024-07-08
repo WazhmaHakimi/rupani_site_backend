@@ -26,6 +26,8 @@ Route::get('documentaryVideos', [FrontendPagesController::class, 'documentaryVid
 Route::get('career', [FrontendPagesController::class, 'career']);
 Route::get('whereWeWork', [FrontendPagesController::class, 'whereWeWork']);
 Route::get('whatWeDoCategory', [FrontendPagesController::class, 'whatWeDoCategory']);
+Route::get('categories', [FrontendPagesController::class, 'categories']);
+Route::get('{slug}', [FrontendPagesController::class, 'whatWeDo']);
 
 Route::post('storeMessage', [CommentController::class, 'save']);
 

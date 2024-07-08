@@ -16,6 +16,7 @@ use App\Models\DocumentaryVideo;
 use App\Models\Career;
 use App\Models\WhereWeWork;
 use App\Models\WhatWeDoCategory;
+use App\Models\WhatWeDo;
 
 class FrontendPagesController extends Controller
 {
@@ -86,13 +87,13 @@ class FrontendPagesController extends Controller
         return response()->download($pathToFile, time() . '.' . 'pdf');
     }
 
-    public function reports() {
+    public function reports()
+    {
         $reports = Report::all();
 
         return response()->json($reports, 200);
     }
 
-    
     public function readReport($id)
     {
         $report = Report::find($id);
@@ -144,5 +145,29 @@ class FrontendPagesController extends Controller
         $whatWeDoCategory = WhatWeDoCategory::all();
 
         return response()->json($whatWeDoCategory, 200);
+    }
+
+    public function whatWeDo($slug)
+    {
+        $item = WhatWeDoCategory::where('slug', $slug)->first();
+        if ($item) {
+            $whatWeDo = WhatWeDo::where('category_id', $item->id)->get();
+
+            return response()->json($whatWeDo, 200);
+        } else {
+            return response()->json([
+                'error' => [
+                    'message' => 'Page not found!',
+                    'code' => 404
+                ]
+            ], 404);
+        }
+    }
+
+    public function categories()
+    {
+        $categories = WhatWeDoCategory::select('name', 'slug')->get();
+
+        return response()->json($categories, 200);
     }
 }

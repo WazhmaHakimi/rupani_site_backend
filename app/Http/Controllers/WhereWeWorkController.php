@@ -41,7 +41,7 @@ class WhereWeWorkController extends Controller
 
                 $data = base64_decode($data);
                 $image_name = time() . $k . '.png';
-                $path = public_path() . '/images/WhereWeWork/' . $image_name;
+                $path = public_path() . '/images/frontend/WhereWeWork/' . $image_name;
 
                 file_put_contents($path, $data);
 
@@ -89,7 +89,7 @@ class WhereWeWorkController extends Controller
 
                 $data = base64_decode($data);
                 $image_name = time() . $k . '.png';
-                $path = public_path() . '/images/WhereWeWork/' . $image_name;
+                $path = public_path() . '/images/frontend/WhereWeWork/' . $image_name;
 
                 file_put_contents($path, $data);
 
@@ -161,9 +161,9 @@ class WhereWeWorkController extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->move('images/frontend/ManagementTeam/', $filename);
+            $file->move('images/frontend/WhereWeWork/', $filename);
 
-            $path = 'images/frontend/ManagementTeam/' . $filename;
+            $path = 'images/frontend/WhereWeWork/' . $filename;
             $teamMember->image = $path;
         }
 

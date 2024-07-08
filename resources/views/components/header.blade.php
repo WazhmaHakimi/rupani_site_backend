@@ -200,7 +200,7 @@
                                     </li>
         
                                     <li>
-                                        <a href="{{url('WhatWeDoContent')}}">Content</a>
+                                        <a href="{{url('whatWeDoContent')}}">Content</a>
                                     </li>
                                 </ul>
                             </li> 
