@@ -33,7 +33,7 @@
                                     <div class="form-group">
                                         <label for="cnaslider-textme" class="control-label col-lg-2">Description</label>
                                         <div class="col-lg-10">
-                                            <input class=" form-control" name="description" type="text" placeholder="Enter a short Description about the image you are adding" required="" aria-required="true" value="{{ old('name') }}">
+                                            <textarea class=" form-control" name="description" type="text" placeholder="Enter a short Description about the image you are adding" required="" aria-required="true" rows="5">{{ old('description') }}</textarea>
                                             @error('description')
                                             <label id="slider-text-error" class="error" for="slider-text">
                                                 {{ $message }}

@@ -151,11 +151,12 @@
                                                 {{ $message }}
                                             </label>
                                             @enderror
+                                            <b>For better design, add an image with these dimensions: 3000x1300.</b>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <div class="col-lg-offset-2 col-lg-10">
+                                        <div class="col-lg-offset-5 col-lg-3">
                                             <button class="btn btn-success waves-effect waves-light" type="submit">Save</button>
                                             <button class="btn btn-default waves-effect" type="button">Cancel</button>
                                         </div>

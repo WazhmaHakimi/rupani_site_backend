@@ -79,6 +79,7 @@
                                                 {{ $message }}
                                             </label>
                                             @enderror
+                                            <b>For better design, add an image with these dimensions: 1440x540.</b>
                                         </div>
                                     </div>
 

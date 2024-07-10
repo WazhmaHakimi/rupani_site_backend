@@ -55,7 +55,7 @@
                 @if(Session::has('success'))
                     <a class="btn btn-success waves-effect waves-light autohidebut" href="javascript:;" onclick="$.Notification.autoHideNotify('success', 'top right', 'I will be closed in 5 seconds...','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae orci ut dolor scelerisque aliquam.')">Success</a>
                 @endif
-                <form class="form-horizontal m-t-20" action="register" method="POST">
+                <form class="form-horizontal m-t-40" action="register" method="POST">
                     @csrf
                     <div class="form-group">
                         <div class="col-xs-12">
@@ -78,7 +78,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group ">
+                    {{-- <div class="form-group ">
                         <div class="col-xs-12">
                             <div class="checkbox checkbox-primary">
                                 <input id="checkbox-signup" type="checkbox" checked="">
@@ -88,7 +88,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group text-center m-t-40">
                         <div class="col-xs-12">

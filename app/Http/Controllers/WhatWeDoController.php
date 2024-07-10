@@ -110,7 +110,7 @@ class WhatWeDoController extends Controller
                 'title' => 'required|string',
                 'starter_text' => 'required|string',
                 'starter_image' => 'sometimes|nullable|image',
-                'category_id' => 'required|exists:what_we_do_categories,id|unique',
+                'category_id' => 'required|exists:what_we_do_categories,id',
                 'content' => 'required',
             ],
             [

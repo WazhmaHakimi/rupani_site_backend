@@ -72,7 +72,7 @@
                             </form>
 
                             <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="dropdown hidden-xs">
+                                {{-- <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="md md-notifications"></i> <span class="badge badge-xs badge-danger">3</span>
                                     </a>
@@ -128,13 +128,13 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> --}}
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
                                 </li>
-                                <li class="hidden-xs">
+                                {{-- <li class="hidden-xs">
                                     <a href="#" class="right-bar-toggle waves-effect waves-light"><i class="md md-chat"></i></a>
-                                </li>
+                                </li> --}}
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">
                                         <div class="thumb-md img-circle text-uppercase" style="border: 1px solid white; color: white; display: flex; justify-content: center; align-items: center; font-size: 20px; font-weight: bold; margin-top:1rem">
@@ -143,7 +143,6 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>
-                                        <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
                                         <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
                                         <li><a href="logout"><i class="md md-settings-power"></i> Logout</a></li>
                                     </ul>
@@ -172,7 +171,6 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ auth()->user()->name }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>
-                                    <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
                                     <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
                                     <li><a href="logout"><i class="md md-settings-power"></i> Logout</a></li>
                                 </ul>
@@ -265,5 +263,4 @@
                 </div>
             </div>
             <!-- Left Sidebar End --> 
-
 

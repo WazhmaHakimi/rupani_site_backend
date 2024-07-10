@@ -16,7 +16,7 @@
                 <div class="col-sm-12">
                     <h4 class="pull-left page-title">Directos</h4>
                     <ol class="breadcrumb pull-right">
-                        <li><a href="Partners">Partners</a></li>
+                        <li><a href="{{url('partners')}}">Partners</a></li>
                         <li class="active">Add a Partner</li>
                     </ol>
                 </div>

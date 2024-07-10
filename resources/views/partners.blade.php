@@ -39,7 +39,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
-                                        <th>Link</th>
+                                        <th class="text-wrap">Link</th>
                                         <th>Image Alt</th>
                                         <th  class="no-sort">Image</th>
                                         <th class="no-sort">Actions</th>
@@ -51,7 +51,7 @@
                                     <tr class="datatable">
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->link }}</td>
+                                        <td class="text-wrap">{{ Str::limit($item->link, 80, '...') }}</td>
                                         <td>{{ $item->image_alt }}</td>
                                         <td>
                                             <img src="{{ $item->image }}" width="100%" height="50" />

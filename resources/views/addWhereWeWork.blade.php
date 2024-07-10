@@ -47,6 +47,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="form">
+                                @if(!$whereWeWork)
                                 <form class="cmxform form-horizontal tasi-form" id="commentForm" method="POST"
                                     action="addWhereWeWork" novalidate="novalidate" enctype="multipart/form-data">
                                     @csrf
@@ -58,7 +59,7 @@
                                             <input class=" form-control" name="image_alt" type="text"
                                                 placeholder="Enter the image's alternative text less than 125 Characters"
                                                 required="" aria-required="true"
-                                                value="{{ (old('image_alt') != $whereWeWork->image_alt && old('image_alt') === null) ? $whereWeWork->image_alt : old('image_alt') }}">
+                                                value="{{ old('image_alt') }}">
                                             @error('image_alt')
                                             <label id="image_alt" class="error" for="image_alt">
                                                 {{ $message }}
@@ -80,7 +81,7 @@
                                             <label for="content" class="control-label">Content</label>
                                             {{-- <textarea id="summernote">{{ old('content') }}</textarea> --}}
                                             <textarea name="content"
-                                                class="summernote">{{ (old('content') != $whereWeWork->content && old('content') === null) ? $whereWeWork->content : old('content') }}</textarea>
+                                                class="summernote">{{ old('content') }}</textarea>
                                             {{-- <input type="hidden" name="content" id="summernote-content" value="">
                                             --}}
                                         </div>
@@ -100,6 +101,61 @@
                                         </div>
                                     </div>
                                 </form>
+                                @else
+                                <form class="cmxform form-horizontal tasi-form" id="commentForm" method="POST"
+                                action="addWhereWeWork" novalidate="novalidate" enctype="multipart/form-data">
+                                @csrf
+
+                                <div class="form-group">
+
+                                    <div class="col-lg-6">
+                                        <label for="image_alt" class="control-label">Image Alt</label>
+                                        <input class=" form-control" name="image_alt" type="text"
+                                            placeholder="Enter the image's alternative text less than 125 Characters"
+                                            required="" aria-required="true"
+                                            value="{{ (old('image_alt') != $whereWeWork->image_alt && old('image_alt') === null) ? $whereWeWork->image_alt : old('image_alt') }}">
+                                        @error('image_alt')
+                                        <label id="image_alt" class="error" for="image_alt">
+                                            {{ $message }}
+                                        </label>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <label for="image" class="control-label">Image</label>
+                                        <input class="form-control" name="image" type="file">
+                                        @error('image')
+                                        <label id="image" class="error" for="image">
+                                            {{ $message }}
+                                        </label>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <label for="content" class="control-label">Content</label>
+                                        {{-- <textarea id="summernote">{{ old('content') }}</textarea> --}}
+                                        <textarea name="content"
+                                            class="summernote">{{ (old('content') != $whereWeWork->content && old('content') === null) ? $whereWeWork->content : old('content') }}</textarea>
+                                        {{-- <input type="hidden" name="content" id="summernote-content" value="">
+                                        --}}
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-lg-11 col-lg-offset-1">
+                                        @if(!$whereWeWork)
+                                        <button class="btn btn-success waves-effect waves-light"
+                                            type="submit">Add</button>
+                                            @else
+                                            <button class="btn btn-info waves-effect waves-light"
+                                            type="submit">Update</button>
+                                            @endif
+                                        <button class="btn btn-default waves-effect" type="button">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                                @endif
                             </div> <!-- .form -->
                         </div>
                     </div>

@@ -5,8 +5,8 @@
 @section('css-links')
 
 <!--bootstrap-wysihtml5-->
-<link href="assets/summernote/summernote.css" rel="stylesheet" />
-<link href="assets/select2/select2.css" rel="stylesheet" type="text/css" />
+<link href="{{url('assets/summernote/summernote.css')}}" rel="stylesheet" />
+<link href="{{url('assets/select2/select2.css')}}" rel="stylesheet" type="text/css" />
 
 @endsection
 
@@ -79,6 +79,7 @@
                                                 {{ $message }}
                                             </label>
                                             @enderror
+                                            <b>For better design, add an image with these dimensions: 1440x540.</b>
                                         </div>
                                     </div>
 
@@ -137,8 +138,8 @@
 
     @section('script-links')
     <!--form validation init-->
-    <script src="assets/summernote/summernote.min.js"></script>
-    <script src="assets/select2/select2.min.js" type="text/javascript"></script>
+    <script src="{{url('assets/summernote/summernote.min.js')}}"></script>
+    <script src="{{url('assets/select2/select2.min.js')}}" type="text/javascript"></script>
 
     <script>
         $(document).ready(function() {
