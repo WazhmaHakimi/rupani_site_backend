@@ -252,9 +252,9 @@
                                 <a href="{{url('comments')}}" class="waves-effect"><i class="md   md-message"></i><span> Comments </span></a>
                             </li>
                             
-                            <li>
+                            {{-- <li>
                                 <a href="{{url('profile')}}" class="waves-effect"><i class="md   md-settings"></i><span> Settings </span></a>
-                            </li>
+                            </li> --}}
 
                         </ul>
                         <div class="clearfix"></div>
